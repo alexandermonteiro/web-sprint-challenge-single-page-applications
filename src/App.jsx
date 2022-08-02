@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
@@ -10,7 +10,16 @@ const App = () => {
       </header>
       <h1>Lambda Eats</h1>
       <p>You can remove this code and create your own header</p>
-      <main></main>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <h2>Welcome</h2>
+          </Route>
+          <Route exact path="/pizza">
+            <h2>Here comes the form</h2>
+          </Route>
+        </Switch>
+      </main>
 
       <footer>
         <p>&copy; Copyright 2022 Lambda Eats</p>
