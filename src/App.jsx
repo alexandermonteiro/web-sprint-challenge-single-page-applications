@@ -8,15 +8,19 @@ const App = () => {
   return (
     <>
       <header>
-        <Link to="/">Home</Link>
-        <Link to="/pizza">Order Your Pizza</Link>
+        <Link to="/" data-test-id="gohome">
+          Home
+        </Link>
+        <Link to="/pizza" data-test-id="gopizza">
+          Order Your Pizza
+        </Link>
       </header>
       <h1>Lambda Eats</h1>
       <p>You can remove this code and create your own header</p>
       <main>
         <Switch>
           <Route exact path="/">
-            <h2>Welcome</h2>
+            <h2>Welcome to Lambda Eats!</h2>
             <Link to="/pizza" id="order-pizza">
               Order Pizza
             </Link>
